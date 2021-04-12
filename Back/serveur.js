@@ -1,4 +1,4 @@
-const smashgg = require('smashgg.js');
+const smashgg = require('smashgg.js/src/v3');
 smashgg.initialize('1dc0a5ed01e681d16702e6871e1ad23b');
 const Phase = smashgg.Phase;
  

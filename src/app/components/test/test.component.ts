@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../services/api.service'
 
 @Component({
   selector: 'app-test',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  constructor() { }
+  Tournament:any = [];
+
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.apiService.GetTournament().subscribe(res => {
+      console.log(res)
+      this.Tournament =res;
+    });
   }
 
 }
